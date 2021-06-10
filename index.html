@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<title>Meu Site</title>
+		<meta charset="utf-8"> 
+	</head>
+
+	<body>
+
+		<p>
+			Na head utilizamos a meta charset="utf-8" para definir um padrão de caracteres da nossa língua
+		</p>
+		<p>	
+			Utilizamos <strong>strong</strong> para textos em negrito.<br>
+			Utilizamos <em>em</em> para textos em itálico.<br>
+			Utilizamos <u>u</u> para textos sublinhados.<br>
+			Utilizamos <strike>strike</strike> para textos riscados.<br>
+		</p><hr>
+
+		<h3>
+			Listas Não Ordenadas ("ul" - unordered list)
+		</h3>
+		<p>
+			Para criar uma lista não ordenada utilizamos o "ul" e o "li" para adicionar itens nessa lista.
+		</p>
+		<!-- type pode ser utilizado o circle, square e disc(padrão) -->
+		<ul>
+			<li>Notebook</li>
+			<li>Mouse</li>
+			<li>Teclado</li>
+		</ul><hr>
+
+		<h3>
+			Listas Ordenadas ("ol" - ordered list)
+		</h3>
+		<p>
+			Para criar uma lista organizada utilizamos o "ol" e o "li" para inserir itens nessa lista.
+		</p>
+		<!-- type pode ser utilizado o 1(padrão), A, a, I e o i -->
+			<ol type="1">
+				<li>Arrumar emprego</li>
+				<li>Guardar dinheiro</li>
+				<li>Comprar um computador</li>
+			</ol><hr>	
+
+		<h3>
+			Imagens
+		</h3>
+		<p>
+			Podemos adicionar imagens utilizando o comando 'img src""'.<br>
+			ex: img src"imagem/ferrari.jpg"<br>
+			A imagem deve estar dentro da pasta do projeto.<br>			
+		</p>
+		<img src="imagens/htmlimg.jfif">
+		<p>
+			Também podemos utilizar uma imagem direto da internet utilizando um link utilizando a mesma estrutura.
+		</p>
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbXp5sQnVK_7mjeafugOC5QoSqFGvwDKo_Gw&usqp=CAU" width="300">
+		<p>
+			Podemos ajustar a largura com o "width" e a altura com o "height".<br>
+			ex. img src="imagens/htmlimg.jfif" width:"300" height:"400""
+		</p><hr>
+
+			<h3><a href="link.html">Link - Clique para saber mais</a><h3><hr>
+
+		<H3>Tabelas</H3>
+		<p>
+			Para iniciarmos uma tabela utilizamos o comando "table", podemos incrementar adicionando bordas com o comando "border" e precisamos adicionar mais duas estruturas dentro de "table", as linhas com "tr"(table roll) e os dados com "td"(table data). Podemos definir os titulos de nossa tabela com "th"(table header).
+		</p>
+		<table border="2" width="400">
+			<tr>
+				<th>Nome</th>
+				<th>Idade</th>
+				<th>Profissão</th>
+			</tr>
+
+			<tr>
+				<td>Gisele</td>
+				<td>33</td>
+				<td>Professora</td>
+			</tr>
+
+			<tr>
+				<td>Fellype</td>
+				<td>32</td>
+				<td>Desenvolvedor</td>
+			</tr>
+
+			<tr>
+				<td>Luana</td>
+				<td>20</td>
+				<td>Advogada</td>
+			</tr>
+
+			<tr>
+				<td rowspan="2">Estudantes</td>
+				<td colspan="2">3 estudantes</td>
+			</tr>
+
+			<tr>				
+				<td colspan="2">1 formado</td>
+			</tr>
+
+		</table><hr>
+
+		<h3>Formulários</h3>
+		<p>
+			Para criarmos um formulário utilizamos o comando "form" e dentro de formas colocamos os itens deste formulario utilizando o comando "imput" seguido dos atributos "type" e "name". Se utilizarmos o "type" <em>password</em>, os caracteres serão substituidos por asteristicos.<br>
+			Podemos criar um botão para nosso formulário utilizando o atributo <em>button</em> ou <em>submit</em> porém não precisamos definir um "name", ao ivés disso utilizamos o atributo "value" para definir o texto no botão.
+			ex. imput type:"text" name:"login"<br>
+		</p>
+		<form>
+			Nome:
+			<input type="text" name="Nome"><br><br>
+			Telefone:
+			<input type="text" name="Telefone"><br><br>
+			Senha:
+			<input type="password" name="Senha"><br><br>
+			<input type="submit" value="Loggin">
+
+		</form>
+		<p>
+			Existem outras funções em formulários, podemos por exemplo pedir para que se escolha um dentre algumas opções utilizando o "type" <em>radio</em> para cada opção lembrando de manter sempre o mesmo "name" para evitar multiplas seleções e devemos adicionar o atributo "value" para que retorne as informações da seleção.
+		</p>
+			<form>			Sexo:<br>
+			<input type="radio" name="sexo" value="M">Masculino<br>
+			<input type="radio" name="sexo" value="F">Feminino<br>
+			</form>
+
+		<p>
+			Podemos criar opções selecionaveis em checkbox utilizando o atributo "type" e <em>checkbox</em>
+		</p>
+			<form>
+			Opções:<br>
+			<input type="checkbox" name="opções"> Carros<br>
+			<input type="checkbox" name="opções"> Motos<br>
+			<input type="checkbox" name="opções"> Caminhões<br>
+			<input type="checkbox" name="opções"> Trailers<br>
+			<input type="checkbox" name="opções"> Quadriciculos<br>
+			</form>
+		<p>
+			Também podemos criar uma dropbox com vários itens para serem escolhidos utilizando o comando "select" e dentro o atributo "option" e adicionando um "value" para este atributo.
+		</p>
+			<form>
+			Estado:<br>
+			<select name="estado">
+				<option value="SP">SP</option>
+				<option value="RJ">RJ</option>
+				<option value="MG">MG</option>
+				<option value="ES">ES</option>
+				<option value="BA">BA</option>
+				<option value="AM">AM</option>				
+			</select><br>
+			</form>
+
+		<p>
+			Podemos criar uma caixa de texto para o usuário utilizando o comando "textarea".
+		</p>
+			<form>
+			Observações:<br>
+			<textarea></textarea><br>
+			<input type="submit" name="observações"><br>
+			</form><hr>
+		<h3>Caracteres Especiais</h3>
+			Podemos utilizar caracteres especiais trocando o caractere por Entities
+
+	</body>
+
+</html>
